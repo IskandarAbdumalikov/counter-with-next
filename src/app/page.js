@@ -1,10 +1,17 @@
 import Header from "@/components/header/Header";
+import ProductWrapper from "@/components/product-wrapper/ProductWrapper";
+import { useGetProductsQuery } from "@/lib/api/productApi";
+import Link from "next/link";
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="container">
       <Header/>
-      Home Page
+      <ProductWrapper/>
+      <Link href={'/wishlist'}>
+       Wishlist 
+      </Link>
 
     </main>
   );
